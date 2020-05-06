@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+<!-- ---- -->
+{% block content %}
+<div class="col p-5">
+  <form class="form-inline mt-5">
+    <div class="form-group mx-sm-3 mb-2">
+      <input
+        type="password"
+        name="username"
+        class="form-control"
+        id="inputPassword2"
+        placeholder="Username"
+      />
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <input
+        type="password"
+        name="first_name"
+        class="form-control"
+        id="inputPassword2"
+        placeholder="First Name"
+      />
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <input
+        type="password"
+        name="last_name"
+        class="form-control"
+        id="inputPassword2"
+        placeholder="Last Name"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</div>
+<div class="col p-5">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for post in posts %}
+      <tr>
+        <th scope="row">{{post.id}}</th>
+        <td>{{post.first_name}}</td>
+        <td>{{post.last_name}}</td>
+        <td>{{post.username}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
