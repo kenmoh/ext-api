@@ -2,31 +2,29 @@
 <!-- ---- -->
 {% block content %}
 <div class="col p-5">
-  <form class="form-inline mt-5">
+  <form class="form-inline mt-5" method="POST">
+    {% csrf_token %}
     <div class="form-group mx-sm-3 mb-2">
       <input
-        type="password"
+        type="text"
         name="username"
         class="form-control"
-        id="inputPassword2"
         placeholder="Username"
       />
     </div>
     <div class="form-group mx-sm-3 mb-2">
       <input
-        type="password"
+        type="text"
         name="first_name"
         class="form-control"
-        id="inputPassword2"
         placeholder="First Name"
       />
     </div>
     <div class="form-group mx-sm-3 mb-2">
       <input
-        type="password"
+        type="text"
         name="last_name"
         class="form-control"
-        id="inputPassword2"
         placeholder="Last Name"
       />
     </div>
